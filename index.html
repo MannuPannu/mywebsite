@@ -1,0 +1,17 @@
+<html ng-app="manneApp">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script src="bower_components/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="app/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="app/controllers/controllers.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>My angular test</title>
+	</head>
+	<body ng-controller="MainCtrl">
+		<div ui-view>
+		</div>
+		<a ui-sref="blog">My Blog</a>
+		<a ui-sref="games">Games</a>
+	</body>
+
+</html>
