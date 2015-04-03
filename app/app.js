@@ -1,3 +1,5 @@
+'use strict'
+
 var app = angular.module('manneApp', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
