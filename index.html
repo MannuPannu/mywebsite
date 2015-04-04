@@ -1,21 +1,14 @@
-<html ng-app="manneApp">
+<html>
 	<head>
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-		<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="bower_components/angular/angular.js" type="text/javascript" charset="utf-8"></script>
-		<script src="app/scripts/app.js" type="text/javascript" charset="utf-8"></script>
-		<script src="app/scripts/controllers/controllers.js" type="text/javascript" charset="utf-8"></script>
-		<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js" type="text/javascript" charset="utf-8"></script>
 		<title>My angular test</title>
 	</head>
 	<body>
 		<div ui-view>
 		</div>
+		<script src="bower_components/requirejs/require.js" data-main="app/scripts/main"></script>
 	</body>
 
-	<!-- <script src="lib/requirejs/require.js" data&#45;main="js/main.js"></script> -->
 </html>
