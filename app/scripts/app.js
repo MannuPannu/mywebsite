@@ -19,6 +19,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		.state('main.games', {
 			url: "/games",
 			templateUrl: "app/views/partials/games.html"
+		})
+		.state('main.about', {
+			url: "/about",
+			templateUrl: "app/views/partials/about.html"
 		});
 });
 
