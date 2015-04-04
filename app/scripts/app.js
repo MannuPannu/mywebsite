@@ -1,12 +1,8 @@
 'use strict'
 
-define(['angular', 'angularUiRouter'], function(angular) {
+define(['angular', 'angularUiRouter', 'blogController'], function(angular, angularUiRouter, blogController) {
 
 	var app = angular.module('manneApp', ['ui.router']);
-
-	app.controller('Foo', function($scope) {
-		$scope.foo = "Footext";
-	});
 
 	app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -20,7 +16,8 @@ define(['angular', 'angularUiRouter'], function(angular) {
 			})
 			.state('main.blog', {
 				url: "/blog",
-				templateUrl: "app/views/partials/blog.html"	
+				templateUrl: "app/views/partials/blog.html",
+				controller: blogController
 			})
 			.state('main.games', {
 				url: "/games",
@@ -32,4 +29,7 @@ define(['angular', 'angularUiRouter'], function(angular) {
 			});
 	});
 
+	app.controller('BlogController', blogController);
+
+	return app;
 });

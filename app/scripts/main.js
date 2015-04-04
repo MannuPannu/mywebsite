@@ -3,6 +3,7 @@ require.config({
 	 paths: {
  	   	angular: '../../bower_components/angular/angular',
 		angularUiRouter: '../../bower_components/angular-ui-router/release/angular-ui-router',
+		blogController: 'controllers/blogController'
 	 },
 	shim: {
 		'angular' : {
