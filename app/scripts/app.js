@@ -1,6 +1,6 @@
 'use strict'
 
-define(['angular', 'angularUiRouter', 'blogController'], function(angular, angularUiRouter, blogController) {
+define(['angular', 'angularUiRouter', 'blogController', 'navbarController'], function(angular, angularUiRouter, blogController, navbarController) {
 
 	var app = angular.module('manneApp', ['ui.router']);
 
@@ -29,7 +29,7 @@ define(['angular', 'angularUiRouter', 'blogController'], function(angular, angul
 			});
 	});
 
-	app.controller('BlogController', blogController);
+	app.controller('navbarController', navbarController);
 
 	return app;
 });

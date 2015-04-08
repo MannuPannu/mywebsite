@@ -2,8 +2,11 @@ require.config({
 	baseUrl: 'app/scripts/',
 	 paths: {
  	   	angular: '../../bower_components/angular/angular',
-		angularUiRouter: '../../bower_components/angular-ui-router/release/angular-ui-router',
-		blogController: 'controllers/blogController'
+ 	   	angularUiRouter: '../../bower_components/angular-ui-router/release/angular-ui-router',
+        jquery: '../../bower_components/jquery/dist/jquery.min',
+        bootstrapJs: '../../bower_components/bootstrap/dist/js/bootstrap.min',
+		blogController: 'controllers/blogController',
+		navbarController: 'controllers/navbarController'
 	 },
 	shim: {
 		'angular' : {
@@ -11,22 +14,23 @@ require.config({
 		},
 		'angularUiRouter' : {
 			deps: ['angular']
-		}
+		},
+        bootstrapJs: {
+            deps: ['jquery']
+        }
 	},
 	priority: ["angular"]
 
 });
 
-require(['angular',
-		'app'], function(angular, app) {
+require(['angular','jquery', 'bootstrapJs',
+		'app'], function(angular) {
 
-			var $html = angular.element(document.getElementsByTagName('html')[0]);
+			angular.element(document.getElementsByTagName('html')[0]);
 			angular.element().ready(function() {
 
 				// bootstrap the app manually
 				angular.bootstrap(document, ['manneApp']);
-				// 					
 			});
-
 		}
 );

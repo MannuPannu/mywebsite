@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 define([], function() {
 	var blogController = function ($scope, $http) {
@@ -7,9 +7,7 @@ define([], function() {
 
 			$http.get('/api/blogentries', {cache: true}).success(function (blogEntries) {
 				$scope.blogEntries = blogEntries;
-				console.log(blogEntries);
 			});
-
 	};
 
 	return blogController;	
