@@ -2,7 +2,7 @@
 
 define(['angular', 'angularUiRouter', 'blogController', 'navbarController'], function(angular, angularUiRouter, blogController, navbarController) {
 
-	var app = angular.module('manneApp', ['ui.router']);
+	var app = angular.module('manneApp', ['ui.router', 'hljs']);
 
 	app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -28,6 +28,12 @@ define(['angular', 'angularUiRouter', 'blogController', 'navbarController'], fun
 				templateUrl: "app/views/partials/about.html"
 			});
 	});
+
+   app.config(function(hljsServiceProvider) {
+        hljsServiceProvider.setOptions({
+            tabReplace: '   '
+        });
+    });
 
 	app.controller('navbarController', navbarController);
 
