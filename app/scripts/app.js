@@ -26,6 +26,10 @@ define(['angular', 'angularUiRouter', 'blogController', 'navbarController'], fun
 			.state('main.about', {
 				url: "/about",
 				templateUrl: "app/views/partials/about.html"
+			})
+			.state('login', {
+					url: "/login",
+				templateUrl: "app/views/partials/login.html"
 			});
 	});
 

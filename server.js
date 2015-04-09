@@ -37,6 +37,13 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 
 //add some dummy data
 require('./backend/config/dummydata');
+
+//Configure passport (auth solution)
+require('./backend/config/passport');
+
+//Configure express
+require('./backend/config/express')(app);
+
 //Configure routes
 require('./backend/routes')(app);
 

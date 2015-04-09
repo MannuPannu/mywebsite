@@ -4,7 +4,17 @@ var mongoose = require('mongoose');
 
 var BlogEntry = mongoose.model('BlogEntry');
 
+var User = mongoose.model('User');
+
+User.find({}).remove(function() {
+	User.create({
+			username: 'manne',
+			password: 'poo'
+	});
+});
+
 //Populate db with some dummy data
+
 
 BlogEntry.find({}).remove(function() {
 	
