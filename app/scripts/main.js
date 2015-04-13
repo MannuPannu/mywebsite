@@ -7,6 +7,7 @@ require.config({
         bootstrapJs: '../../bower_components/bootstrap/dist/js/bootstrap.min',
         angularHighlightjs: '../../bower_components/angular-highlightjs/angular-highlightjs.min',
         highlightjs: '../../bower_components/highlightjs/highlight.pack',
+		ngSanitize: '../../bower_components/angular-sanitize/angular-sanitize.min',
 		blogController: 'controllers/blogController',
 		navbarController: 'controllers/navbarController'
 	 },
@@ -22,13 +23,16 @@ require.config({
         },
         angularHighlightjs: {
             deps: ['angular', 'highlightjs']
-        }
+        },
+		'ngSanitize': {
+			deps: ['angular']
+		}
 	},
 	priority: ["angular"]
 
 });
 
-require(['angular','jquery', 'bootstrapJs', 'angularHighlightjs',
+require(['angular','jquery', 'bootstrapJs','ngSanitize', 'angularHighlightjs',
 		'app'], function (angular) {
 
         //console.log(hljs);

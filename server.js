@@ -4,6 +4,8 @@ var fs = require('fs');
 var mongoose = require('mongoose');
 var app = express();
 
+global.appRoot = path.resolve(__dirname);
+
 mongoose.connect('mongodb://localhost/mydb');
 
 var db = mongoose.connection;
@@ -41,7 +43,7 @@ require('./backend/config/passport');
 require('./backend/config/express')(app);
 
 //Configure routes
-require('./backend/routes')(app);
+// require('./backend/routes')(app);
 
 exports = module.exports = app;
 

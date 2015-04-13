@@ -2,7 +2,7 @@
 
 define(['angular', 'angularUiRouter', 'blogController', 'navbarController'], function(angular, angularUiRouter, blogController, navbarController) {
 
-	var app = angular.module('manneApp', ['ui.router', 'hljs']);
+	var app = angular.module('manneApp', ['ui.router', 'hljs', 'ngSanitize']);
 
 	app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -30,6 +30,10 @@ define(['angular', 'angularUiRouter', 'blogController', 'navbarController'], fun
 			.state('login', {
 					url: "/login",
 				templateUrl: "app/views/partials/login.html"
+			})
+			.state('register', {
+					url: "/register",
+				templateUrl: "app/views/partials/register.html"
 			});
 	});
 
