@@ -4,10 +4,6 @@ var fs = require('fs');
 var mongoose = require('mongoose');
 var app = express();
 
-// we are specifying the html directory as another public directory
-app.use(express.static(path.join(__dirname, 'app')));
-app.use(express.static(path.join(__dirname, '')));
-
 mongoose.connect('mongodb://localhost/mydb');
 
 var db = mongoose.connection;

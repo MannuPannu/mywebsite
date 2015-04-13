@@ -4,6 +4,7 @@ var passport = require("passport");
 var express = require("express");
 var session = require("express-session");
 var path = require("path");
+var LocalStrategy = require('passport-local');
 
 module.exports = function(app) {
 	
@@ -14,7 +15,10 @@ module.exports = function(app) {
 	}));
 
 	app.use(passport.initialize());
-
 	app.use(passport.session());
-	// app.use('/', routes);
+
+    console.log("DirName" + __dirname);
+    // we are specifying the html directory as another public directory
+	app.use(express.static(path.join(__dirname, 'app')));
+	app.use(express.static(path.join(__dirname, '')));
 };
