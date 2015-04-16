@@ -12,7 +12,11 @@ define([], function () {
 		});
 
 		$scope.logout = function() {
-			$http.get('logout');			
+		    $http.get('logout').success(function (isLoggedOut) {
+			   if (isLoggedOut) {
+			       $scope.user = false;
+			   } 
+			});			
 		};
     };
 

@@ -42,8 +42,5 @@ require('./backend/config/passport');
 //Configure express
 require('./backend/config/express')(app);
 
-//Configure routes
-// require('./backend/routes')(app);
-
 exports = module.exports = app;
 

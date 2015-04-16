@@ -35,9 +35,6 @@ require.config({
 require(['angular','jquery', 'bootstrapJs','ngSanitize', 'angularHighlightjs',
 		'app'], function (angular) {
 
-        //console.log(hljs);
-		    //hljs.initHighlightingOnLoad(); //Init code syntax plugin
-
 			angular.element(document.getElementsByTagName('html')[0]);
 			angular.element().ready(function() {
 
