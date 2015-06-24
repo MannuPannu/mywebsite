@@ -43,7 +43,7 @@ define(['angular', 'angularUiRouter', 'blogController', 'navbarController'], fun
         });
     });
 
-	app.controller('navbarController', navbarController);
+	app.controller('navbarController', ['$scope', '$location', '$http', navbarController]);
 
 	return app;
 });
