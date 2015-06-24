@@ -14,22 +14,26 @@ module.exports = function(grunt) {
 						],
 				},
 			},
-			// requirejs: {
-			// 		compile: {
-			// 					 options: {
-			// 					    appDir: "app/",
-			// 						baseUrl: ".",
-			// 						dir: "prod/app/",
-			// 						mainConfigFile: 'app/scripts/main.js',
-			// 						findNestedDependencies: true,
-			// 						inlineText: true
-			// 					  }
-			// 				 }
-//			}
+			requirejs: {
+					compile: {
+								 options: {
+								    appDir: "app/",
+									baseUrl: ".",
+									dir: "prod/app/",
+									mainConfigFile: 'app/scripts/main.js',
+									findNestedDependencies: true,
+									inlineText: true,
+									optimize: 'uglify',
+									uglify: {
+										mangle: true
+									}
+								  }
+							 }
+			}
 	});
 
 	grunt.loadNpmTasks('grunt-annotated-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
-	grunt.registerTask('default', ['copy']);
+	grunt.registerTask('default', ['copy', 'requirejs']);
 };

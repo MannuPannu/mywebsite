@@ -15,7 +15,8 @@
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-requirejs": "^0.4.4",
-    "grunt-mkdir": "^0.1.2"
+    "grunt-mkdir": "^0.1.2",
+    "grunt-ng-annotate": "^1.0.1"
   },
   "dependencies": {
     "body-parser": "^1.12.2",
