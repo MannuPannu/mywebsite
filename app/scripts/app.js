@@ -27,11 +27,11 @@ define(['angular', 'angularUiRouter', 'blogController', 'navbarController'], fun
 				url: "/about",
 				templateUrl: "app/views/partials/about.html"
 			})
-			.state('login', {
+			.state('main.login', {
 					url: "/login",
 				templateUrl: "app/views/partials/login.html"
 			})
-			.state('register', {
+			.state('main.register', {
 					url: "/register",
 				templateUrl: "app/views/partials/register.html"
 			});
