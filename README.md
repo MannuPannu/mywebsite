@@ -1,9 +1,9 @@
 # mywebsite
 My website code (angular etc)
 
-
 Todo:
-	* Add require js! DONE
-	* Fix active buttons in navbar! -> add controller to navbar to set class="active"
-	* Add mongodb DONE
-	* Create mongodb database on azure
+	* Create azure website and try publish current code to get angular and node running
+	* Add mongodb to AZURE, DONE (created a app service with MongoLab)
+	* Modify code to work with MongoLab connection
+	* Modify MongoLab instance to work with web site (there is a nice tutorial for this)
+	
