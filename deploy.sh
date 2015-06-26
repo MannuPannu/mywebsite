@@ -122,7 +122,7 @@ echo Installing bower packages
 if [ -e "$DEPLOYMENT_TARGET/bower.json" ]; then
 	  echo Installing bower
 	  cd "$DEPLOYMENT_TARGET"
-	  eval $NPM_CMD install bower
+	  eval $NPM_CMD install bower -g
 	  exitWithMessageOnError "installing bower failed"
 	  ./node_modules/.bin/bower install
 	  exitWithMessageOnError "bower failed"
