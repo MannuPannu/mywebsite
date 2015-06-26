@@ -6,7 +6,12 @@ var app = express();
 
 global.appRoot = path.resolve(__dirname);
 
-mongoose.connect('mongodb://localhost/mydb');
+// Set default node environment to development
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
+var config = require('./backend/config/config');
+
+mongoose.connect(config.mongo.uri);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -15,13 +20,12 @@ db.once('open', function (callback) {
 	console.log("connection open!");		
 });
 
-var port = process.env.PORT || 1337;
-
-var server = app.listen(port, function() {
+var server = app.listen(config.port, function() {
 		var host = server.address().address;
 		var port = server.address().port;
 
-		console.log('Example app listening at http://%s:%s', host, port);
+		console.log('Express server listening at http://%s:%s', host, port);
+        console.log('Connecting to mongodb uri: ' + config.mongo.uri);
 });
 
 //Load all db models
