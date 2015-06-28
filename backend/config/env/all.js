@@ -6,7 +6,7 @@ var rootPath = path.normalize(__dirname + '/../../..');
 
 module.exports = {
     root: rootPath,
-    port: process.env.PORT || 1337,
+    port: process.env.OPENSHIFT_NODEJS_PORT || 1337,
     mongo: {
         options: {
             db: {

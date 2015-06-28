@@ -7,7 +7,7 @@ var app = express();
 global.appRoot = path.resolve(__dirname);
 
 // Set default node environment to development
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.NODE_ENV = process.env.OPENSHIFT_NODEJS_PORT ? "production" : 'development';
 
 var config = require('./backend/config/config');
 
